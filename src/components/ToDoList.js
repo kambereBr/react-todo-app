@@ -2,13 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ToDoItem from './ToDoItem';
 
-/* eslint-disable max-len */
 const ToDoList = ({
   todosProps, handleChange, delTodo, setUpdate,
 }) => (
   <ul>
     {todosProps.map((todo) => (
-      <ToDoItem key={todo.id} itemProp={todo} handleChange={handleChange} delTodo={delTodo} setUpdate={setUpdate} />
+      <ToDoItem
+        key={todo.id}
+        itemProp={todo}
+        handleChange={handleChange}
+        delTodo={delTodo}
+        setUpdate={setUpdate}
+      />
     ))}
   </ul>
 );

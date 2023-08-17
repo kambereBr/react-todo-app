@@ -48,8 +48,8 @@ const ToDoLogic = () => {
   const setUpdate = (updatedTitle, id) => {
     setTodos(
       todos.map((todo) => {
-        /* eslint-disable no-param-reassign */
         if (todo.id === id) {
+          /* eslint-disable no-param-reassign */
           todo.title = updatedTitle;
         }
         return todo;
@@ -57,11 +57,15 @@ const ToDoLogic = () => {
     );
   };
 
-  /* eslint-disable max-len */
   return (
     <div>
       <InputTodo addTodoItem={addTodoItem} />
-      <ToDoList todosProps={todos} handleChange={handleChange} delTodo={delTodo} setUpdate={setUpdate} />
+      <ToDoList
+        todosProps={todos}
+        handleChange={handleChange}
+        delTodo={delTodo}
+        setUpdate={setUpdate}
+      />
     </div>
   );
 };
